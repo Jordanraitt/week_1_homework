@@ -18,10 +18,20 @@ def total_cash(shops)
 p shops[:admin][:total_cash]
 end
 
-def add_or_remove_cash(shop, amount)
-  cash = shop[:admin][:total_cash] -= amount
+def add_or_remove_cash(shops, amount)
+  cash = shops[:admin][:total_cash] -= amount
 end
 
-def add_or_remove_cash(shop, amount)
-  cash = shop[:admin][:total_cash] += amount
+def add_or_remove_cash(shops, amount)
+  cash = shops[:admin][:total_cash] += amount
 end
+
+def pets_sold(shops)
+  p shops[:admin][:pets_sold]
+end
+
+def increase_pets_sold(shops, amount)
+  sold = shops[:admin][:pets_sold] += amount
+end
+
+# .length 
