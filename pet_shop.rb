@@ -34,8 +34,6 @@ def increase_pets_sold(shops, amount)
   shops[:admin][:pets_sold] += amount
 end
 
-# .length
-
 def stock_count(shops)
   shops[:pets].length
 end
@@ -43,7 +41,6 @@ end
 def pets_by_breed(shops, breed)
 count = []
 
-    # pets = @pet_shop[:pets]
     for pet in shops[:pets]
       if pet[:breed] == breed
       count.push(pet)
@@ -59,4 +56,38 @@ def find_pet_by_name(shops, animal)
     end
   end
   return nil
+end
+
+# def remove_pet_by_name(shops, animal)
+#   for pet in shops[:pets]
+#     if pet[:name] == animal
+#      pet.delete(animal)
+#     end
+#   end
+# end
+
+def remove_pet_by_name(shops, animal)
+shops[:pets].delete_at(3)
+end
+
+def add_pet_to_stock(pets, stock)
+  pets = @pet_shop[:pets]
+  stock = @new_pet
+  pets.push(stock)
+end
+
+def customer_cash(customers)
+  customers[:cash]
+end
+
+def remove_customer_cash(customers, amount)
+  customers[:cash] -= amount
+end
+
+def customer_pet_count(customers)
+  customers[:pets].length
+end
+
+def add_pet_to_customer(customers, pet)
+  customers[:pets].push(pet)
 end
