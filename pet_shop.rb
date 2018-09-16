@@ -66,6 +66,10 @@ end
 #   end
 # end
 
+# def remove_pet_by_name(shops, animal)
+# shops[:pets].delete(animal)
+# end
+
 def remove_pet_by_name(shops, animal)
 shops[:pets].delete_at(3)
 end
