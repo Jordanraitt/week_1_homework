@@ -52,10 +52,11 @@ count = []
   return count
 end
 
-
-# def find_pet_by_name(shops, animal_name)
-#   for shop in shops[:pets]
-#   if pets[:name] == animal_name
-# return shop?
-#   end
-# end
+def find_pet_by_name(shops, animal)
+  for pet in shops[:pets]
+    if pet[:name] == animal
+  return pet
+    end
+  end
+  return nil
+end
