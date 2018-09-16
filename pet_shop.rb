@@ -70,8 +70,16 @@ end
 # shops[:pets].delete(animal)
 # end
 
+# def remove_pet_by_name(shops, animal)
+# shops[:pets].delete_at(3)
+# end
+
 def remove_pet_by_name(shops, animal)
-shops[:pets].delete_at(3)
+  for pet in shops[:pets]
+    if pet[:name] == animal
+     shops[:pets].delete(pet)
+    end
+  end
 end
 
 def add_pet_to_stock(pets, stock)
